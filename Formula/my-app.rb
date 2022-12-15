@@ -1,8 +1,8 @@
 class MyApp < Formula
   desc ""
   homepage ""
-  url "https://github.com/lsyncd/lsyncd/archive/release-2.3.1.tar.gz"
-  sha256 "fc19a77b2258dc6dbb16a74f023de7cd62451c26984cedbec63e20ff22bcbdd8"
+  url "https://github.com/PaulBatchelor/soundpipe/archive/v1.7.0.tar.gz"
+  sha256 "2d6f6b155ad93d12f59ae30e2b0f95dceed27e0723147991da6defc6d65eadda"
   license ""
 
   # depends_on "cmake" => :build
