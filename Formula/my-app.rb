@@ -3,19 +3,21 @@ class MyApp < Formula
   homepage "https://github.com/lsyncd/lsyncd"
   url "https://github.com/lsyncd/lsyncd/archive/release-2.3.0.tar.gz"
   sha256 "08a1bcab041fa5d4c777ae272c72ad9917442b6e654b14ffd1a82ba0cd45e4ef"
-   license "GPL-2.0-or-later"
+  license "GPL-2.0-or-later"
 
-   bottle do
-     sha256 cellar: :any,                 arm64_ventura:  "e7680aff9e773b5604912611f785c07e2fec198485bb45448c482bdf9b801ca8"
-     sha256 cellar: :any,                 arm64_monterey: "7efe77196dbd68eed6bf1756d431c8d673ef190bc9a34a3e4cd4b69ec68ed86f"
-     sha256 cellar: :any,                 arm64_big_sur:  "9cd46cb4d36241420c4016c10745fbe8086d79426e3c65428f9ec6918ef7471f"
-     sha256 cellar: :any,                 monterey:       "8aa99334757054b742bdf154cb9062975bc9971e10e86fb6fd3d829efa4195db"
+  bottle do
+    sha256 cellar: :any,                 arm64_ventura:  "e7680aff9e773b5604912611f785c07e2fec198485bb45448c482bdf9b801ca8"
+    sha256 cellar: :any,                 arm64_monterey: "7efe77196dbd68eed6bf1756d431c8d673ef190bc9a34a3e4cd4b69ec68ed86f"
+    sha256 cellar: :any,                 arm64_big_sur:  "9cd46cb4d36241420c4016c10745fbe8086d79426e3c65428f9ec6918ef7471f"
+    sha256 cellar: :any,                 monterey:       "8aa99334757054b742bdf154cb9062975bc9971e10e86fb6fd3d829efa4195db"
     sha256 cellar: :any,                 big_sur:        "216c8d2fcebd0ce0402d68697e209fc35f47b31f8628a1c73d31a6a21fe75b52"
     sha256 cellar: :any,                 catalina:       "9bf855ed792d5c2a66b23f326d4093c49c1d35012400e02a305b43bb5155d45e"
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "1e199eed33824a260fad6c0cd15edafe30a7e6b727e9d626e9974e7ccce3a170"
   end
+
   depends_on "cmake" => :build
   depends_on "lua"
+
   on_macos do
     # From https://opensource.apple.com/releases/
     xnu_headers = {
@@ -67,7 +69,9 @@ class MyApp < Formula
       "12.2"    => ["xnu-8019.80.24.tar.gz",      "2fbfe90ec8c93d93f0dd69f09610011d26a722f98266202de6a7c2af764712b4"],
       "12.3"    => ["xnu-8020.101.4.tar.gz",      "df715e7b2bd5db0ba212b5b0613fbbc85c3cbc4e61f6ee355a8b6cf9a87d3374"],
     }
+
     macos_version = MacOS.full_version.major_minor # Ignore bugfix/security updates
+
     on_catalina :or_older do
       macos_version = MacOS.full_version
     end
@@ -81,6 +85,7 @@ class MyApp < Formula
       sha256 checksum
     end
   end
+
   def install
     args = ["-DCMAKE_INSTALL_MANDIR=#{man}"]
     if OS.mac?
@@ -93,6 +98,7 @@ class MyApp < Formula
     system "cmake", "--build", "build"
     system "cmake", "--install", "build"
   end
+
   test do
     system bin/"lsyncd", "--version"
   end
