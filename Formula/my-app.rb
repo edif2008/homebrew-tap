@@ -1,8 +1,8 @@
 class MyApp < Formula
   desc ""
   homepage ""
-  url "https://registry.npmjs.org/@babel/core/-/core-7.20.5.tgz"
-  sha256 "7c30f9e1dcb7ac82fba886325e71ff4da29f628706258c842844aa394dd63f93"
+  url "https://github.com/gotoh/ssh-connect/archive/1.105.tar.gz"
+  sha256 "96c50fefe7ecf015cf64ba6cec9e421ffd3b18fef809f59961ef9229df528f3e"
   license ""
 
   # depends_on "cmake" => :build
