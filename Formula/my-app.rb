@@ -1,8 +1,8 @@
 class MyApp < Formula
   desc ""
   homepage ""
-  url "https://github.com/gotoh/ssh-connect/archive/1.105.tar.gz"
-  sha256 "96c50fefe7ecf015cf64ba6cec9e421ffd3b18fef809f59961ef9229df528f3e"
+  url "https://github.com/lsyncd/lsyncd/archive/release-2.3.1.tar.gz"
+  sha256 "fc19a77b2258dc6dbb16a74f023de7cd62451c26984cedbec63e20ff22bcbdd8"
   license ""
 
   # depends_on "cmake" => :build
