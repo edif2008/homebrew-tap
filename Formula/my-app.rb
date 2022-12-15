@@ -1,8 +1,8 @@
 class MyApp < Formula
   desc ""
   homepage ""
-  url "https://github.com/DOCGroup/ACE_TAO/releases/download/ACE%2BTAO-7_0_10/ACE+TAO-7.0.10.tar.bz2"
-  sha256 "cba005e2d267884ba9634414bd39c2a72b8717eb9f7a7a293298f3b2a05c841e"
+  url "https://registry.npmjs.org/@babel/core/-/core-7.20.5.tgz"
+  sha256 "7c30f9e1dcb7ac82fba886325e71ff4da29f628706258c842844aa394dd63f93"
   license ""
 
   # depends_on "cmake" => :build
