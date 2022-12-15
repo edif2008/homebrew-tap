@@ -1,4 +1,4 @@
-class Foo < Formula
+class MyApp < Formula
   desc ""
   homepage ""
   url "https://example.com/foo-0.1.tar.gz"
